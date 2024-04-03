@@ -1,20 +1,26 @@
 {
-  "deno.enable": true,
-  "deno.lint": true,
-  "editor.defaultFormatter": "denoland.vscode-deno",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
-  },
-  "css.customData": [
-    ".vscode/tailwind.json"
-  ]
+	"deno.enable": true,
+	"deno.lint": true,
+	"editor.defaultFormatter": "denoland.vscode-deno",
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "denoland.vscode-deno"
+	},
+	"[jsonc]": {
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"css.customData": [
+		".vscode/tailwind.json"
+	]
 }

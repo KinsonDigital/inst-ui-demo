@@ -1,5 +1,16 @@
 import { useSignal } from "@preact/signals";
 import Counter from "../islands/Counter.tsx";
+import { Handlers } from "$fresh/server.ts";
+
+export const handler: Handlers = {
+    async GET(req, ctx): Promise<Response> {
+        const resp = await ctx.render();
+
+		// console.log("POST INVOKED FROM THE LOGIN");
+
+        return resp;
+    }
+}
 
 export default function Home() {
   const count = useSignal(3);
