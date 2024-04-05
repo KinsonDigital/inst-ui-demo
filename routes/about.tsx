@@ -11,8 +11,6 @@ type RenderData<T> = {
 
 export const handler: Handlers = {
     async GET(_req, ctx): Promise<Response> {
-		console.log("HELLO FROM THE ABOUT PAGE");
-
         const person:Person = {
             firstName: "Kinson",
             lastName: "Digital",

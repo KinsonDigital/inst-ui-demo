@@ -6,8 +6,6 @@ export const handler: Handlers = {
     async GET(req, ctx): Promise<Response> {
         const resp = await ctx.render();
 
-		// console.log("POST INVOKED FROM THE LOGIN");
-
         return resp;
     }
 }
