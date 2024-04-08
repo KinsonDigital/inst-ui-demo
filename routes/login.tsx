@@ -59,6 +59,12 @@ export const handler: Handlers = {
 			provider: "google"
 		});
 
+		if (error) {
+			const errorMsg = `"There was an issue with the authentication process."\n${error.message}`;
+
+			return new Response(errorMsg, { status: 500 });
+		}
+
 		const googleAuthPageUrl = data.url ?? "";
 
 		redirectHeaders.append("Location", googleAuthPageUrl);
@@ -67,17 +73,11 @@ export const handler: Handlers = {
 			isAuthenticated: false
 		};
 
-		if (error) {
-			const errorMsg = `"There was an issue with the authentication process."\n${error.message}`;
-
-			return new Response(errorMsg, { status: 500 });
-		} else {
-			// Redirect to the google auth consent page
-			return new Response("Redirecting...", {
-				status: 302,
-				headers: redirectHeaders,
-			});
-		}
+		// Redirect to the google auth consent page
+		return new Response("Redirecting...", {
+			status: 302,
+			headers: redirectHeaders,
+		});
 	}
 };
 

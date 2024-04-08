@@ -59,7 +59,7 @@ export async function handler(req: Request, ctx: FreshContext<State>): Promise<R
 		// const cookie = `sb:session=${data.session.access_token}; Path=/; HttpOnly; Secure; SameSite=Lax`;
 
 		const redirectUrl = extractUrlWithoutCode(url);
-		req.headers.set("Location", redirectUrl);
+		
 
 		return new Response("Logging In . . .", {
 			headers: req.headers,
